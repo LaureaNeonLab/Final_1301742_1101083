@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter">
+
+    <ion-pane>
+        
+
+          
+        <h1 class="title">Where Is Waldo?</h1>
+      </ion-header-bar>
+      <ion-content class="has-header padding" ng-controller="GalleryCtrl">
+        <br><br>
+
+        <div class="item item-divider">
+          <i class="ion-images"></i>
+          The Gallery of Unknown!
+        </div>
+
+        <a class="item item-list-detail">
+          <ion-scroll direction="x">
+            <img ng-repeat="image in allImages" ng-src="{{image.src}}" ng-click="showImages($index)" class="image-list-thumb"/>
+          </ion-scroll>
+        </a>
+                <p> The idea of Where Is Waldo is pretty straightforward, as most of us
+                    have had the book version of this application. As for those of us who are new to the
+                    concept, you should be able to find the guy who is in the background of the application.</p>
+                   <p> "The books consist of a series of detailed double-page spread illustrations depicting dozens or more people doing a variety of amusing things at a given location. Readers are challenged to find a character named Wally hidden in the group. Wally's distinctive red-and-white-striped shirt, bobble hat, and glasses make him slightly easier to recognise, but many illustrations contain red herrings involving deceptive use of red-and-white striped objects"</p>
+         <a id="toggleform" href="#">Tips!</a>
+    <div id="hideform">
+       To bad for you, but there won't be any tips available!
+    </div>
+     
+                <p><a href="http://www.shopwaldo.com/Dept.aspx?cp=21423_23417">Show your dedication and purchase the actual book!</a></p>
+     
+            <button class = "button" ng-click = "playAudio()">Excitement for the game!(music)</button>
+     
+     
+     
+     
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>                
+      <p ALIGN="middle"> <a href="/index.html">Press here to get to the main page!</a></p>
+     
+     
+     <p align="right"> <i class = "icon icon ion-social-facebook"><a href="https://www.facebook.com/whereswaldo/">Contact! </a> </i></p>
+      </ion-content>
+     
+    </ion-pane>
+    
+  </body>
+</html>
